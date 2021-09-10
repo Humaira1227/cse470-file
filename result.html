@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyShopping</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'EasyShopping/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <form method="post" action=""></form>
+</head>    
+<body>
+   <header>
+    <nav>
+       <div class="main">
+           <ul>
+               <li class="active"><a href="#">Home</a></li>
+               <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Make-up</a></li>
+                        <li><a href="#">Women's wear</a></li>
+                        <li><a href="#">Men's wear</a></li>
+                        <li><a href="#">Accessories</a></li> 
+                    </ul>
+                </li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Contact</a></li>
+           </ul>
+       </div>
+    <nav>
+    <div class="title">
+        <h1>EASY SHOPPING</h1>
+    </div>
+
+   </header>
+
+   <div>
+       <ul>
+           {% for result in results %}
+           <li>
+                {{ result }}
+           </li>
+           {% endfor %}
+       </ul>
+   </div>
+</body>
